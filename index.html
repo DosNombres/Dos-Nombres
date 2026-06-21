@@ -289,8 +289,40 @@ h3{
         font-size:1rem;
         padding:10px;
     }
-
+.banner-seccion{
+    width:100%;
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    margin:80px 0 40px;
+    border-top:4px solid #D4AF37;
+    border-bottom:4px solid #D4AF37;
 }
+
+.banner-seccion h2{
+    color:#D4AF37;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.banner-seccion p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.2rem;
+}
+     @media(max-width:768px){
+
+    .banner-seccion h2{
+        font-size:2rem;
+    }
+
+    .banner-seccion p{
+        font-size:1rem;
+    }
+
+}   
+
 </style>
 </head>
 <body>
@@ -325,9 +357,9 @@ h3{
 </section>
 
 <div class="productos">
-<div class="categoria-banner">
+<div class="banner-seccion">
 
-    <h2>☕ Bebidas Calientes</h2>
+    <h2>Bebidas Calientes</h2>
 
     <p>
         Aromas que despiertan recuerdos y acompañan cada momento.
@@ -454,7 +486,7 @@ onclick="abrirProducto(
 
 </div>
 
-    <div class="categoria-banner">
+    <div class="banner-seccion">
 
     <h2>Bebidas Frías</h2>
 
