@@ -1,31 +1,22 @@
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.8);
-    z-index:999;
+body{
+    background:#e8f5e9;
 }
 
-.modal-contenido{
-    background:white;
-    width:90%;
-    max-width:600px;
-    margin:50px auto;
-    border-radius:15px;
-    padding:20px;
+header{
+    background:#4b5d2a;
+    color:white;
     text-align:center;
+    padding:30px;
 }
 
-.modal-contenido img{
-    width:100%;
+.productos{
+    display:flex;
+    justify-content:center;
+}
+
+.producto{
+    width:300px;
+    background:white;
     border-radius:12px;
-}
-
-.cerrar{
-    float:right;
-    font-size:30px;
-    cursor:pointer;
+    overflow:hidden;
 }
