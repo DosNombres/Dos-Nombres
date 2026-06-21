@@ -222,7 +222,12 @@ h3{
     flex-direction:column;
     justify-content:center;
 }
-
+.precio{
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:bold;
+    margin-top:20px;
+}
 .cerrar{
     position:absolute;
     top:15px;
@@ -576,7 +581,51 @@ onclick="abrirProducto(
     </div>
 
 </div>
+<div class="banner-seccion">
+    <h2>🍳Desayunos y Tostadas</h2>
+    <p>
+        Opciones frescas y deliciosas para comenzar el día con el mejor sabor.
+    </p>
+</div>
+<div class="producto"
+onclick="abrirProducto(
+'Huevos al Gusto',
+'https://images.unsplash.com/photo-1525351484163-7529414344d8',
+'Dos huevos preparados a tu elección: fritos, revueltos u omelette. Acompañados de tostadas y aguacate.',
+'11.900')">
 
+<img src="https://images.unsplash.com/photo-1525351484163-7529414344d8">
+
+<h4>Huevos al Gusto</h4>
+
+</div>
+
+    <div class="producto"
+onclick="abrirProducto(
+'Tostada de Aguacate',
+'imagen/tostada aguacate.jpeg',
+'Tostadas artesanales acompañadas de aguacate fresco. Una opción ligera, saludable y llena de sabor.',
+'14.900')">
+
+<img src="imagen/tostada-aguacate.jpeg">
+
+<h4>Tostada de Aguacate</h4>
+
+</div>
+
+    <div class="producto"
+onclick="abrirProducto(
+'Tostada de Pollo',
+'imagen/tostada-pollo.jpeg',
+'Tostadas doradas acompañadas de pollo cremoso y aguacate fresco. Una combinación perfecta para cualquier momento del día.',
+'18.000')">
+
+<img src="imagen/tostada pollo.jpeg">
+
+<h4>Tostada de Pollo</h4>
+
+</div>
+    
 <div class="modal" id="modal">
 
     <span class="cerrar" onclick="cerrarProducto()">&times;</span>
