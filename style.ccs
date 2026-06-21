@@ -1,1 +1,43 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f2ea;
+}
 
+header{
+    background:#4b5d2a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+h2{
+    text-align:center;
+    margin-top:30px;
+}
+
+.productos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.producto{
+    width:250px;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.producto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.producto h3,
+.producto p{
+    padding:10px;
+}
