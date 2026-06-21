@@ -3,50 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dos Nombres Café</title>
 
 <style>
 
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f3f0e8;
+    padding:0;
+    box-sizing:border-box;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f8f5ef;
+}
+
+/* HERO */
+
 header{
     background:#000;
-    color:#d4af37;
+    color:#fff;
     text-align:center;
-    padding:50px 20px;
+    padding:80px 20px;
+    min-height:70vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .logo{
     width:220px;
     max-width:80%;
-    border-radius:50%;
+    margin-bottom:30px;
+}
+
+h1{
+    color:#D4AF37;
+    font-size:3rem;
+    margin-bottom:25px;
 }
 
 .historia{
+    max-width:900px;
     color:white;
-    max-width:800px;
-    margin:20px auto;
     line-height:1.8;
+    font-size:1.2rem;
+    margin-bottom:40px;
 }
 
 .boton{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 30px;
-    background:#d4af37;
+    background:#D4AF37;
     color:black;
     text-decoration:none;
-    border-radius:30px;
+    padding:15px 40px;
+    border-radius:40px;
     font-weight:bold;
+    font-size:1.1rem;
+    transition:.3s;
 }
 
+.boton:hover{
+    transform:scale(1.05);
+}
 
-h2{
+/* MENU */
+
+.menu-titulo{
     text-align:center;
-    margin:40px 0 20px;
+    padding:60px 20px 20px;
+}
+
+.menu-titulo h2{
+    color:#b68d2a;
+    font-size:42px;
+}
+
+.menu-titulo p{
+    max-width:700px;
+    margin:20px auto;
+    color:#555;
+    line-height:1.7;
+}
+
+h3{
+    text-align:center;
+    font-size:2rem;
+    margin-top:40px;
 }
 
 .productos{
@@ -54,13 +104,13 @@ h2{
     justify-content:center;
     flex-wrap:wrap;
     gap:20px;
-    padding:20px;
+    padding:30px;
 }
 
 .producto{
-    width:300px;
+    width:350px;
     background:white;
-    border-radius:15px;
+    border-radius:20px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
     cursor:pointer;
@@ -73,14 +123,16 @@ h2{
 
 .producto img{
     width:100%;
-    height:250px;
+    height:260px;
     object-fit:cover;
 }
 
-.producto h3{
-    padding:15px;
-    margin:0;
+.producto h4{
+    padding:20px;
+    font-size:1.5rem;
 }
+
+/* MODAL */
 
 .modal{
     display:none;
@@ -109,51 +161,62 @@ h2{
 }
 
 .info{
-    padding:25px;
+    padding:30px;
 }
 
 .cerrar{
     position:absolute;
-    right:25px;
     top:15px;
-    font-size:40px;
+    right:25px;
     color:white;
+    font-size:45px;
     cursor:pointer;
 }
 
 </style>
-
 </head>
 <body>
-    
+
 <header>
 
-<img src="dosnombres logo.jpeg" class="logo">
+    <img src="logo.jpg" class="logo">
 
-<h1>Dos Nombres Café</h1>
+    <h1>Dos Nombres Café</h1>
 
-<p class="historia">
-Dos Nombres Café nació del sueño de dos hermanas que creen que el café tiene el poder de devolvernos a momentos especiales. Cada taza y cada plato buscan despertar recuerdos que alimentan el alma.
-</p>
+    <p class="historia">
+        Dos Nombres Café nació del sueño de dos hermanas que creen que el café tiene el poder de devolvernos a momentos especiales.
+        Cada taza y cada plato buscan despertar recuerdos que alimentan el alma.
+    </p>
 
-<a href="#menu" class="boton">
-Ver Menú
-</a>
+    <a href="#menu" class="boton">
+        Ver Menú
+    </a>
 
 </header>
 
-<h2 id="menu">Cafés Calientes</h2>
+<section class="menu-titulo" id="menu">
+
+    <h2>Nuestro Menú</h2>
+
+    <p>
+        Cada bebida y cada plato han sido elegidos para crear momentos que merecen ser recordados.
+    </p>
+
+</section>
+
+<h3>Cafés Calientes</h3>
 
 <div class="productos">
 
     <div class="producto"
-        onclick="abrirProducto(
-        'Capuchino',
-        'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200',
-        'Preparado con espresso y leche vaporizada, coronado con una espuma cremosa y delicada.')">
+    onclick="abrirProducto(
+    'Capuchino',
+    'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200',
+    'Preparado con espresso y leche vaporizada, coronado con una espuma cremosa y delicada.')">
 
         <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600">
-        <h3>Capuchino</h3>
+
+        <h4>Capuchino</h4>
 
     </div>
 
@@ -181,7 +244,7 @@ Ver Menú
 
 <script>
 
-function abrirProducto(nombre, foto, descripcion){
+function abrirProducto(nombre,foto,descripcion){
 
     document.getElementById("modal").style.display="block";
 
