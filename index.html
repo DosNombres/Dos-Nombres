@@ -149,7 +149,35 @@ h3{
 .producto:hover{
     transform:translateY(-5px);
 }
+.producto{
+    width:320px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.3s;
+}
 
+.producto:hover{
+    transform:translateY(-8px);
+}
+
+.producto img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.producto h4{
+    padding:18px;
+    margin:0;
+    text-align:center;
+    color:#D4AF37;
+    background:#000;
+    font-size:1.2rem;
+}
+    
 .producto img{
     width:100%;
     height:260px;
@@ -235,19 +263,50 @@ h3{
 
 </section>
 
-<h3>Cafés Calientes</h3>
-
 <div class="productos">
+
+    <!-- CAPUCHINO -->
 
     <div class="producto"
     onclick="abrirProducto(
     'Capuchino',
-    'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200',
-    'Preparado con espresso y leche vaporizada, coronado con una espuma cremosa y delicada.')">
+    'imagen/capuchino.jpeg',
+    'Nuestro capuchino combina espresso recién preparado, leche vaporizada y una espuma cremosa que resalta las notas naturales del café. Una bebida clásica, equilibrada y reconfortante.'
+    )">
 
-        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600">
+        <img src="imagen/capuchino .jpeg">
 
-        <h4>Capuchino</h4>
+        <h4>⭐ Capuchino</h4>
+
+    </div>
+
+    <!-- CAFÉ BOMBÓN -->
+
+    <div class="producto"
+    onclick="abrirProducto(
+    'Café Bombón',
+    'imagen/bombon.jpeg',
+    'Una deliciosa combinación de espresso y leche condensada que crea un contraste perfecto entre intensidad y dulzura. Coronado con espuma suave y un toque de canela.'
+    )">
+
+        <img src="imagen/bombon.jpeg">
+
+        <h4>🆕 Café Bombón</h4>
+
+    </div>
+
+    <!-- MOCACCINO -->
+
+    <div class="producto"
+    onclick="abrirProducto(
+    'Mocaccino',
+    'imagen/moka.jpeg',
+    'La unión perfecta entre café y chocolate. Preparado con espresso, leche vaporizada y chocolate, creando una bebida cremosa y llena de sabor para quienes disfrutan de un toque dulce.'
+    )">
+
+        <img src="imagen/moka.jpeg">
+
+        <h4>⭐ Mocaccino</h4>
 
     </div>
 
