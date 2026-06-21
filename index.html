@@ -221,10 +221,8 @@ h3{
 }
 
 .modal-contenido img{
-    width:100%;
-    height:auto;
-    max-height:70vh;
-    object-fit:contain;
+    width:45%;
+    object-fit:cover;
 
 }
 
@@ -286,8 +284,8 @@ h3{
 onclick="abrirProducto(
 'Espresso',
 'https://images.unsplash.com/photo-1510707577719-ae7c14805e8f',
-'Un espresso intenso y aromático preparado con café de especialidad. La esencia pura del café en una sola taza.'
-'$10.000')">
+'Un espresso intenso y aromático preparado con café de especialidad. La esencia pura del café en una sola taza.',
+'4.500')">
 
 <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e8f">
 
@@ -298,7 +296,7 @@ onclick="abrirProducto(
 onclick="abrirProducto(
 'Americano',
 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085',
-'La combinación perfecta de espresso y agua caliente, logrando una bebida suave, equilibrada y llena de sabor.'
+'La combinación perfecta de espresso y agua caliente, logrando una bebida suave, equilibrada y llena de sabor.',
 '6.000')">
 
 <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
@@ -312,7 +310,7 @@ onclick="abrirProducto(
     onclick="abrirProducto(
     'Capuchino',
     'imagen/capuchino .jpeg',
-    'Nuestro capuchino combina espresso recién preparado, leche vaporizada y una espuma cremosa que resalta las notas naturales del café. Una bebida clásica, equilibrada y reconfortante.'
+    'Nuestro capuchino combina espresso recién preparado, leche vaporizada y una espuma cremosa que resalta las notas naturales del café. Una bebida clásica, equilibrada y reconfortante.',
     '8.500')">
 
         <img src="imagen/capuchino .jpeg">
@@ -325,7 +323,7 @@ onclick="abrirProducto(
 onclick="abrirProducto(
 'Latte',
 'https://images.unsplash.com/photo-1561047029-3000c68339ca',
-'Una mezcla armoniosa de espresso y abundante leche vaporizada, ideal para quienes prefieren sabores suaves y cremosos.'
+'Una mezcla armoniosa de espresso y abundante leche vaporizada, ideal para quienes prefieren sabores suaves y cremosos.',
 '9.000')">
 
 <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca">
@@ -339,7 +337,7 @@ onclick="abrirProducto(
     onclick="abrirProducto(
     'Café Bombón',
     'imagen/bombon.jpeg',
-    'Una deliciosa combinación de espresso y leche condensada que crea un contraste perfecto entre intensidad y dulzura. Coronado con espuma suave y un toque de canela.'
+    'Una deliciosa combinación de espresso y leche condensada que crea un contraste perfecto entre intensidad y dulzura. Coronado con espuma suave y un toque de canela.',
     '')">
 
         <img src="imagen/bombon.jpeg">
@@ -354,7 +352,7 @@ onclick="abrirProducto(
     onclick="abrirProducto(
     'Mocaccino',
     'imagen/moka.jpeg',
-    'La unión perfecta entre café y chocolate. Preparado con espresso, leche vaporizada y chocolate, creando una bebida cremosa y llena de sabor para quienes disfrutan de un toque dulce.'
+    'La unión perfecta entre café y chocolate. Preparado con espresso, leche vaporizada y chocolate, creando una bebida cremosa y llena de sabor para quienes disfrutan de un toque dulce.',
     '11.000')">
 
         <img src="imagen/moka.jpeg">
@@ -367,7 +365,7 @@ onclick="abrirProducto(
 onclick="abrirProducto(
 'Chocolate Caliente',
 'https://images.unsplash.com/photo-1517578239113-b03992dcdd25',
-'Chocolate caliente preparado con una receta reconfortante y cremosa, perfecto para acompañar cualquier momento.'
+'Chocolate caliente preparado con una receta reconfortante y cremosa, perfecto para acompañar cualquier momento.',
 '9.000')">
 
 <img src="https://images.unsplash.com/photo-1517578239113-b03992dcdd25">
@@ -379,7 +377,7 @@ onclick="abrirProducto(
 onclick="abrirProducto(
 'Té Chai',
 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f',
-'Una bebida aromática elaborada con especias y leche vaporizada. Equilibrio perfecto entre dulzura y carácter.'
+'Una bebida aromática elaborada con especias y leche vaporizada. Equilibrio perfecto entre dulzura y carácter.',
 '10.000')">
 
 <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f">
@@ -392,7 +390,7 @@ onclick="abrirProducto(
 onclick="abrirProducto(
 'Aromáticas',
 'https://images.unsplash.com/photo-1544787219-7f47ccb76574',
-'Infusiones seleccionadas para disfrutar momentos de calma y bienestar, disponibles en diferentes sabores.'
+'Infusiones seleccionadas para disfrutar momentos de calma y bienestar, disponibles en diferentes sabores.',
 5.500)">
 
 <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574">
@@ -412,11 +410,13 @@ onclick="abrirProducto(
 
         <div class="info">
 
-            <h2 id="titulo"></h2>
+    <h2 id="titulo"></h2>
 
-            <p id="descripcion"></p>
+    <p id="descripcion"></p>
 
-        </div>
+    <p id="precio" class="precio"></p>
+
+</div>
 
     </div>
 
@@ -445,8 +445,7 @@ function abrirProducto(nombre,foto,descripcion,precio){
     document.getElementById("fotoGrande").src=foto;
 
     document.getElementById("descripcion").innerText=descripcion;
-    <p id="precio" class="precio"></p>
-
+    
     document.getElementById("precio").innerText=precio;
 }
 
