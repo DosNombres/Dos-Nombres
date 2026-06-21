@@ -1,33 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dos Nombres Café</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dos Nombres Café</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f3f0e8;
+}
+
+header{
+    background:#4b5d2a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+h2{
+    text-align:center;
+    margin:40px 0 20px;
+}
+
+.productos{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+}
+
+.producto{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.producto:hover{
+    transform:translateY(-5px);
+}
+
+.producto img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.producto h3{
+    padding:15px;
+    margin:0;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.8);
+    z-index:999;
+}
+
+.modal-contenido{
+    background:white;
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.modal-contenido img{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+}
+
+.info{
+    padding:25px;
+}
+
+.cerrar{
+    position:absolute;
+    right:25px;
+    top:15px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+
 </head>
 <body>
 
-    <header>
-        <h1>Dos Nombres Café</h1>
-        <p>Café de especialidad y momentos inolvidables</p>
-    </header>
+<header>
+    <h1>Dos Nombres Café</h1>
+    <p>Donde el alma tiene sabor a recuerdo</p>
+</header>
 
-    <main>
+<h2>Cafés Calientes</h2>
 
-        <h2>Bebidas</h2>
+<div class="productos">
 
-        <div class="productos">
+    <div class="producto"
+        onclick="abrirProducto(
+        'Capuchino',
+        'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200',
+        'Preparado con espresso y leche vaporizada, coronado con una espuma cremosa y delicada.')">
 
-            <div class="producto">
-                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600" alt="Capuchino">
-                <h3>Capuchino</h3>
-              
-            </div>
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600">
+        <h3>Capuchino</h3>
+
+    </div>
+
+</div>
+
+<div class="modal" id="modal">
+
+    <span class="cerrar" onclick="cerrarProducto()">&times;</span>
+
+    <div class="modal-contenido">
+
+        <img id="fotoGrande">
+
+        <div class="info">
+
+            <h2 id="titulo"></h2>
+
+            <p id="descripcion"></p>
 
         </div>
 
-    </main>
-<script src="script.js"></script>
+    </div>
+
+</div>
+
+<script>
+
+function abrirProducto(nombre, foto, descripcion){
+
+    document.getElementById("modal").style.display="block";
+
+    document.getElementById("titulo").innerText=nombre;
+
+    document.getElementById("fotoGrande").src=foto;
+
+    document.getElementById("descripcion").innerText=descripcion;
+
+}
+
+function cerrarProducto(){
+
+    document.getElementById("modal").style.display="none";
+
+}
+
+</script>
+
 </body>
 </html>
